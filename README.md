@@ -1,22 +1,22 @@
-# Array Visualization
+# Array Visualisation
 
 ## Overview
-This project is an interactive web-based array visualization tool built with React. It allows users to input JavaScript code, execute it, and visualize how arrays are manipulated in real-time. The application highlights array elements being accessed and provides logs for better understanding of the execution process.
+This project is an interactive web-based array visualisation tool built with React. It allows users to input JavaScript code, execute it, and visualise how arrays are manipulated in real-time. The application highlights array elements being accessed and provides logs for better understanding of the execution process.
 
 ## Features
 - **Code Editor:** Integrated with Monaco Editor for writing and executing JavaScript code.
-- **Array Visualization:** Displays changes in the array during execution with highlighted elements.
+- **Array Visualisation:** Displays changes in the array during execution with highlighted elements.
 - **Execution Logs:** Provides step-by-step execution details.
 - **Preloaded Example:** Includes a Bubble Sort algorithm as a demonstration.
 - **Live Execution:** Highlights elements being accessed and updates array values dynamically.
-- **User Interaction:** Allows users to input custom JavaScript code for visualization.
+- **User Interaction:** Allows users to input custom JavaScript code for visualisation.
 
 ## Installation & Setup
 To set up and run the project locally:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/Array-Visualization.git
+   git clone https://github.com/your-username/Array-Visualiser.git
    ```
 2. **Install dependencies:**
    ```sh
@@ -30,29 +30,29 @@ To set up and run the project locally:
 
 ## How It Works
 ### Main Components:
-- **`App.js`**: The core component handling user input, visualization logic, and execution.
-- **`App.css`**: Styles for layout and array visualization.
+- **`App.js`**: The core component handling user input, visualisation logic, and execution.
+- **`App.css`**: Styles for layout and array visualisation.
 - **`index.html`**: The main entry point for rendering the application.
 
 ### JavaScript Logic:
-- **Array Initialization:** Parses and extracts array values from user input.
+- **Array Initialisation:** Parses and extracts array values from user input.
 - **Code Instrumentation:** Modifies user code to track array access and updates.
 - **Proxy Array:** Uses JavaScript Proxy to dynamically track and highlight array operations.
 - **Execution Flow:** Runs user scripts asynchronously while updating UI elements.
 
 ### Key Functions
-#### Array Initialization:
+#### Array Initialisation:
 ```js
-const initializeArray = () => {
+const initialiseArray = () => {
     setLogs([]);
     setHighlightedIndex(null);
     const arrayMatch = code.match(/const\s+(\w+)\s*=\s*\[(.*?)\]/);
     if (arrayMatch) {
         const arrayValues = JSON.parse(`[${arrayMatch[2]}]`);
         setArrayData(arrayValues);
-        addLog(`Initialized array: ${JSON.stringify(arrayValues)}`);
+        addLog(`Initialised array: ${JSON.stringify(arrayValues)}`);
     } else {
-        addLog("No array found in the code for visualization.");
+        addLog("No array found in the code for visualisation.");
     }
 };
 ```
@@ -84,7 +84,7 @@ const proxyArray = (arr) => {
 
 ## Future Improvements
 - **Support for Binary Trees & 2D Arrays**
-- **Enhanced Sorting Algorithm Visualizations**
+- **Enhanced Sorting Algorithm Visualisations**
 - **Step-by-Step Debugging Mode**
 - **Additional Algorithm Examples (Quick Sort, Merge Sort, etc.)**
 - **Improved UI with Graphical Representations**
